@@ -11,6 +11,22 @@
 	\renewcommand{\cftsubsecnumwidth}     {1.0em}
 	\renewcommand{\cftsubsubsecnumwidth}  {1.0em}
 
+    \fancypagestyle{previous}
+    {
+        \commonhead{}
+        \fancyfoot{}
+    }
+    \renewcommand{\prevstyle}
+    {
+        \cleardoublepage{}
+        \assignpagestyle{\chapter}{previous}
+        \thispagestyle{previous}
+        \pagestyle{previous}
+        \pagenumbering{Roman}
+        \resetpagecounter{}
+        \numberingstyle{}
+    }
+
     \newcommand{\PaperContentIndent}{
         \setlength{\cftsecindent}       {0em}
         \setlength{\cftsubsecindent}    {2em}
@@ -22,6 +38,8 @@
         \setlength{\cftsubsecindent}    {4em}
         \setlength{\cftsubsubsecindent} {6em}
     }
+
+    
 
     \setenumerate{
         itemsep=0pt,
